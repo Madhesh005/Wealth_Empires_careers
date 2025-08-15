@@ -1,0 +1,666 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doola - Careers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'doola-blue': '#2563eb',
+                        'doola-green': '#10b981',
+                        'doola-yellow': '#f59e0b',
+                        'doola-purple': '#8b5cf6',
+                        'doola-orange': '#f97316',
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-inter bg-white">
+    
+    <!-- @COMPONENT: Header -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-gray-900">doola</div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Products</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+                    <a href="#careers" class="text-doola-blue font-medium">Careers</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-gray-900 transition-colors">Sign in</button>
+                    <button class="bg-doola-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        Get started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center mb-8">
+                <!-- 3D Briefcase Icon -->
+                <div class="relative">
+                    <div class="w-32 h-32 bg-gradient-to-br from-doola-yellow to-yellow-600 rounded-3xl shadow-2xl transform rotate-12 relative">
+                        <div class="absolute inset-4 bg-gradient-to-br from-yellow-400 to-doola-yellow rounded-2xl">
+                            <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-gradient-to-b from-yellow-600 to-yellow-700 rounded-t-lg"></div>
+                            <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-yellow-700 rounded"></div>
+                        </div>
+                    </div>
+                    <!-- Floating Search Icon -->
+                    <div class="absolute -left-8 top-4 bg-doola-blue text-white p-3 rounded-full shadow-lg">
+                        <i class="fas fa-search text-lg"></i>
+                    </div>
+                    <!-- Floating Target Icon -->
+                    <div class="absolute -right-8 top-4 bg-white p-3 rounded-full shadow-lg">
+                        <div class="w-6 h-6 border-4 border-red-500 rounded-full relative">
+                            <div class="absolute inset-1 bg-red-500 rounded-full"></div>
+                            <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full transform rotate-45"></div>
+                        </div>
+                    </div>
+                    <!-- Floating Clouds -->
+                    <div class="absolute -top-4 -left-12 w-16 h-8 bg-white rounded-full shadow-md"></div>
+                    <div class="absolute -top-2 -right-12 w-12 h-6 bg-white rounded-full shadow-md"></div>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Join our mission to<br>
+                <span class="text-doola-blue">democratize entrepreneurship</span>
+            </h1>
+            
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                We're building the future of business formation and compliance. 
+                Help us empower entrepreneurs worldwide to start and grow their companies.
+            </p>
+            
+            <button data-event="click:handleViewRoles" class="bg-doola-blue text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
+                See open roles
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Backers Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-lg font-semibold text-gray-600 mb-8">Backed By The Best</h2>
+                <div class="flex justify-center items-center space-x-12 flex-wrap">
+                    <!-- Y Combinator -->
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-orange-500 text-white font-bold flex items-center justify-center rounded">Y</div>
+                        <span class="text-gray-900 font-semibold">Combinator</span>
+                    </div>
+                    
+                    <!-- HubSpot -->
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-orange-500 rounded-full"></div>
+                        <span class="text-gray-900 font-semibold">HubSpot</span>
+                    </div>
+                    
+                    <!-- Nexus -->
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="text-doola-blue font-bold text-xl">nexus</div>
+                        <span class="text-xs text-gray-500">venture partners</span>
+                    </div>
+                    
+                    <!-- Hustle Fund -->
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="flex">
+                            <div class="w-3 h-3 bg-doola-purple rounded mr-1"></div>
+                            <div class="w-3 h-3 bg-doola-yellow rounded mr-1"></div>
+                            <div class="w-3 h-3 bg-doola-green rounded mr-1"></div>
+                            <div class="w-3 h-3 bg-doola-orange rounded"></div>
+                        </div>
+                        <span class="text-gray-900 font-semibold">hustle fund</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Backers Section -->
+
+    <!-- @COMPONENT: Commitments Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our commitments</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- People -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-doola-blue text-white rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">People</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Empower entrepreneurs all over the world, especially those who might not have access 
+                        to traditional means of wealth creation.
+                    </p>
+                </div>
+                
+                <!-- Purpose -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-doola-orange text-white rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Purpose</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Democratize access to the largest market in the world, with intentional outreach to 
+                        emerging economies.
+                    </p>
+                </div>
+                
+                <!-- Profit -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-doola-green text-white rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Profit</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Compound wealth creation across the board for us, and our customers. We don't 
+                        just help you start a business; we help you access financial freedom.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Commitments Section -->
+
+    <!-- @COMPONENT: How We Hire Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How we hire</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <div class="bg-doola-blue text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                        Step 1
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-file-alt text-pink-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Application Review</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We'll review your resume and application to see if your skills match up with our current team needs.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <div class="bg-doola-blue text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                        Step 2
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Video Call</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        A 1:1 video call with several members of the doola team to get to know you better for you to learn about us.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <div class="bg-doola-blue text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                        Step 3
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Take-home exercise</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        If you're applying for a role with a take-home exercise, we'll give you a sample project to take home.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <div class="bg-doola-blue text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                        Step 4
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-phone text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Review Call</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        If moving forward is the right step, we'll schedule a call to review your work & final steps in the process.
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <div class="bg-doola-blue text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                        Step 5
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-pink-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Teammate Call</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Depending on your location, we'll have you come onsite, and we do a video call, with your teammates.
+                    </p>
+                </div>
+                
+                <!-- Step 6 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-all">
+                    <div class="bg-doola-blue text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                        Step 6
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Follow up</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We respect your time, so we'll provide a decision and feedback as soon as we can.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: How We Hire Section -->
+
+    <!-- @COMPONENT: Values and Non-Values Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Values and Non-Values</h2>
+                <p class="text-gray-600 max-w-4xl mx-auto mb-8">
+                    Establishing team values is critical. We believe it's equally essential to identify team non-values. We're 
+                    stronger in driving our mission home with both values and non-values taken into account. Note: Our goal 
+                    in sharing these up front and transparency is to be as straightforward with people as possible. Our goal is 
+                    not to be combative in our language; it's to be straightforward.
+                </p>
+                
+                <!-- Toggle Buttons -->
+                <div class="flex justify-center mb-12">
+                    <div class="bg-white rounded-full p-1 shadow-lg">
+                        <button id="valuesBtn" class="px-6 py-2 rounded-full text-sm font-semibold transition-all bg-black text-white">
+                            <i class="fas fa-check mr-2"></i>Values
+                        </button>
+                        <button id="nonValuesBtn" class="px-6 py-2 rounded-full text-sm font-semibold transition-all text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-times mr-2"></i>Non-values
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Values Content -->
+            <div id="valuesContent" class="grid md:grid-cols-3 gap-6">
+                <!-- Communicate with candor -->
+                <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-green-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user text-green-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Communicate with candor</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        Our motto: Strong opinions, loosely held. We operate as a global team 
+                        balancing async and real-time collaboration. Clear, candid 
+                        communication is how we stay aligned and move fast.
+                    </p>
+                    <div class="bg-green-200 rounded-lg p-3">
+                        <p class="text-xs text-green-800">
+                            <strong>Guiding Principle:</strong> We communicate openly, 
+                            challenge ideas with respect, and remain open to better solutions—always prioritizing 
+                            what's best for our customers and team.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Aim for your full potential -->
+                <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-blue-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-blue-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Aim for your full potential</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We're here to build something that's never existed before: the first true 
+                        Business-in-a-Box™. The kind of ambition requires us to push past limits 
+                        and continuously grow.
+                    </p>
+                    <div class="bg-blue-200 rounded-lg p-3">
+                        <p class="text-xs text-blue-800">
+                            <strong>Guiding Principle:</strong> Growth is uncomfortable, 
+                            but settling is worse. We choose the harder path—seeking feedback, learning 
+                            relentlessly, and striving for excellence. Be extraordinary, not ordinary.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Taking initiative with a full-stack mentality -->
+                <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-yellow-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-layer-group text-yellow-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Taking initiative with a full-stack mentality</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We don't wait for perfect instructions or defined roles. If something needs to be 
+                        done, we roll up our sleeves and figure it out with high agency.
+                    </p>
+                    <div class="bg-yellow-200 rounded-lg p-3">
+                        <p class="text-xs text-yellow-800">
+                            <strong>Guiding Principle:</strong> "That wasn't on the job 
+                            description" doesn't exist at doola. We take ownership, think end-to-end, and execute 
+                            with a bias for action.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Be trustworthy and always ready to help -->
+                <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-orange-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-orange-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Be trustworthy and always ready to help</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We help entrepreneurs turn their dreams into reality. To do that, we 
+                        operate with integrity, accuracy, and a commitment to doing things right.
+                    </p>
+                    <div class="bg-orange-200 rounded-lg p-3">
+                        <p class="text-xs text-orange-800">
+                            <strong>Guiding Principle:</strong> Trust is everything—within 
+                            our team and with our customers. We do what we say, own our mistakes, and lift each 
+                            other up.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Urgency and focus to execute -->
+                <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-purple-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-purple-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Urgency and focus to execute</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        Speed matters. We are a fast-moving startup in a massive, untapped market. 
+                        Execution—done with urgency and focus—sets us apart.
+                    </p>
+                    <div class="bg-purple-200 rounded-lg p-3">
+                        <p class="text-xs text-purple-800">
+                            <strong>Guiding Principle:</strong> Rome wasn't built in a day, 
+                            but they laid bricks every hour. We move fast, stay focused, and keep momentum going.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Sweat the details -->
+                <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-gray-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Sweat the details</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        Excellence isn't just about speed—it's about precision. The small things 
+                        compound into big wins, and getting the details right gives us a competitive 
+                        edge.
+                    </p>
+                    <div class="bg-gray-200 rounded-lg p-3">
+                        <p class="text-xs text-gray-800">
+                            <strong>Guiding Principle:</strong> We take pride in our work. 
+                            Double-checking, refining, and obsessing over quality isn't extra—it's the standard.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Non-Values Content (Hidden by default) -->
+            <div id="nonValuesContent" class="grid md:grid-cols-3 gap-6 hidden">
+                <!-- Non-Value 1 -->
+                <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-times text-red-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Perfectionism over progress</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We don't wait for perfect solutions. We ship, learn, and iterate. 
+                        Analysis paralysis kills momentum and opportunities.
+                    </p>
+                </div>
+                
+                <!-- Non-Value 2 -->
+                <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-times text-red-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Ego over collaboration</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        Individual success means nothing if the team fails. We check our egos 
+                        at the door and prioritize collective wins.
+                    </p>
+                </div>
+                
+                <!-- Non-Value 3 -->
+                <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-times text-red-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Comfort zones over growth</h3>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We don't hire for comfort. We're building something unprecedented, 
+                        which requires constant learning and adaptation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Values and Non-Values Section -->
+
+    <!-- @COMPONENT: Join Team CTA -->
+    <section class="bg-gradient-to-br from-blue-100 to-purple-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-blue-200 to-purple-200 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Excited to join our team?
+                        </h2>
+                        <p class="text-gray-700 text-lg mb-6">
+                            You might be the candidate we're looking for. Many of our teams are actively hiring.
+                        </p>
+                        <button data-event="click:handleSeeRoles" class="bg-black text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors">
+                            See open roles
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="md:w-1/3 flex justify-center">
+                        <!-- Handshake illustration placeholder -->
+                        <!-- Professional handshake between two people in business attire -->
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
+                             alt="Professional handshake between colleagues" 
+                             class="rounded-2xl shadow-lg max-w-sm" />
+                        
+                        <!-- Floating elements -->
+                        <div class="absolute top-4 right-8 bg-yellow-400 text-black p-2 rounded-full">
+                            <span class="text-lg font-bold">!</span>
+                        </div>
+                        <div class="absolute bottom-8 right-12 bg-doola-blue text-white p-2 rounded-full">
+                            <span class="text-lg font-bold">?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Join Team CTA -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Get in touch</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                At doola, we value trust, teamwork, and bringing transparency to help organisations make 
+                better decisions. Please don't hesitate to reach out directly at 
+                <a href="mailto:careers@doola.com" class="text-doola-blue hover:underline">careers@doola.com</a>.
+            </p>
+            
+            <button data-event="click:handleReachOut" class="bg-black text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-800 transition-colors">
+                Reach out
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <div class="text-2xl font-bold mb-4">doola</div>
+                    <p class="text-gray-400 text-sm">
+                        The complete platform for starting and running your US business.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">LLC Formation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">EIN</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Bank Account</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Bookkeeping</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Templates</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Startup School</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#careers" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 doola. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement business logic, API calls, or state management
+        
+        (function() {
+            // Values/Non-Values Toggle Functionality
+            const valuesBtn = document.getElementById('valuesBtn');
+            const nonValuesBtn = document.getElementById('nonValuesBtn');
+            const valuesContent = document.getElementById('valuesContent');
+            const nonValuesContent = document.getElementById('nonValuesContent');
+
+            function showValues() {
+                valuesBtn.classList.add('bg-black', 'text-white');
+                valuesBtn.classList.remove('text-gray-600');
+                nonValuesBtn.classList.remove('bg-black', 'text-white');
+                nonValuesBtn.classList.add('text-gray-600');
+                
+                valuesContent.classList.remove('hidden');
+                nonValuesContent.classList.add('hidden');
+            }
+
+            function showNonValues() {
+                nonValuesBtn.classList.add('bg-black', 'text-white');
+                nonValuesBtn.classList.remove('text-gray-600');
+                valuesBtn.classList.remove('bg-black', 'text-white');
+                valuesBtn.classList.add('text-gray-600');
+                
+                nonValuesContent.classList.remove('hidden');
+                valuesContent.classList.add('hidden');
+            }
+
+            valuesBtn.addEventListener('click', showValues);
+            nonValuesBtn.addEventListener('click', showNonValues);
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Button interaction handlers
+            document.querySelectorAll('[data-event]').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // TODO: Implement actual functionality based on data-event attribute
+                    console.log('Button clicked:', this.getAttribute('data-event'));
+                    
+                    // Example: Open roles page, contact form, etc.
+                    const action = this.getAttribute('data-event');
+                    if (action.includes('Roles')) {
+                        // TODO: Navigate to roles page or open modal
+                        alert('Redirecting to open roles page...');
+                    } else if (action.includes('ReachOut')) {
+                        // TODO: Open contact form or mailto
+                        window.location.href = 'mailto:careers@doola.com';
+                    }
+                });
+            });
+
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        })();
+    </script>
+</body>
+</html>

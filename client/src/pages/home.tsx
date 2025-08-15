@@ -59,38 +59,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold text-blue-900" data-testid="logo-wealth-empires">Wealth Empires</div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <button className="text-gray-600 hover:text-gray-900 transition-colors" data-testid="nav-services">Services</button>
-              <button className="text-gray-600 hover:text-gray-900 transition-colors" data-testid="nav-about">About</button>
-              <button className="text-gray-600 hover:text-gray-900 transition-colors" data-testid="nav-why-us">Why Us</button>
-              <button 
-                className="text-blue-600 font-medium" 
-                onClick={() => scrollToSection('contact')}
-                data-testid="nav-contact"
-              >
-                Contact
-              </button>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <div className="text-sm text-gray-600">
-                <Phone className="w-4 h-4 inline mr-1" />
-                +91 9884521264
-              </div>
-              <Button onClick={handleContactUs} className="bg-blue-600 hover:bg-blue-700" data-testid="button-contact-whatsapp">
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -171,14 +139,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button 
-              onClick={handleContactUs}
-              className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
-              data-testid="button-contact-us"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+
           </motion.div>
         </div>
       </section>
@@ -463,147 +424,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Form Section */}
-      <section id="contact" className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4" data-testid="contact-form-title">Request A Call-Back</h2>
-          </div>
-          
-          <div className="max-w-2xl mx-auto">
-            <form onSubmit={handleSubmitCallback} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full"
-                    data-testid="input-name"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full"
-                    data-testid="input-email"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Input
-                    type="tel"
-                    name="mobile"
-                    placeholder="Your Mobile"
-                    value={formData.mobile}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full"
-                    data-testid="input-mobile"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full"
-                    data-testid="input-subject"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <Textarea
-                  name="message"
-                  placeholder="Message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full"
-                  data-testid="textarea-message"
-                />
-              </div>
-              
-              <div className="text-center">
-                <Button 
-                  type="submit"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all"
-                  data-testid="button-submit-callback"
-                >
-                  Submit Now
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
-              <p className="text-gray-600">Greenways Business Park, Chennai</p>
-              <p className="text-gray-600">9.00 am - 6.00 pm</p>
-            </div>
-            
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mb-4">
-                <Mail className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-              <a href="mailto:support@wealthempires.in" className="text-blue-600 hover:underline">
-                support@wealthempires.in
-              </a>
-            </div>
-            
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mb-4">
-                <Phone className="w-6 h-6" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
-              <a href="tel:+919884521264" className="text-blue-600 hover:underline">
-                +91 9884521264
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">
-            © Wealth Empires Private Limited | All Rights Reserved.
-          </p>
-          <p className="text-gray-500 text-sm mt-2">
-            Designed & Developed By{" "}
-            <a href="https://softrateglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-              Softrate Global
-            </a>
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
